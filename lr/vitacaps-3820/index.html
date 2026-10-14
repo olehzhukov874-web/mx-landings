@@ -412,9 +412,9 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   <!-- 14.10: траст-блок «одобрен / доказано / без противопоказаний / рекомендуют» (просьба пользователя: до этого все блоки были про доставку и подделки) -->
   <div class="apr">
     <div><svg viewBox="0 0 28 28" fill="none" stroke="#b98900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3l9 3.5v6c0 5.5-3.8 9.7-9 11.5-5.2-1.8-9-6-9-11.5v-6L14 3z"/><path d="M9.5 14l3 3 6-6"/></svg><div><b>Aprobado por la Secretaría de Salud</b><span>Y por miles de clientes satisfechos en todo el país</span></div></div>
-    <div><svg viewBox="0 0 28 28" fill="none" stroke="#b98900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3h6M12 3v7l-6 11a2 2 0 001.8 3h12.4a2 2 0 001.8-3l-6-11V3"/><path d="M9 17h10"/></svg><div><b>Eficacia científicamente comprobada</b><span>Respaldada por estudios e historias reales</span></div></div>
+    <div><svg viewBox="0 0 28 28" fill="none" stroke="#b98900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3h6M12 3v7l-6 11a2 2 0 001.8 3h12.4a2 2 0 001.8-3l-6-11V3"/><path d="M9 17h10"/></svg><div><b>Eficacia científicamente comprobada</b><span>Respaldada por estudios y la experiencia de uso</span></div></div>
     <div><svg viewBox="0 0 28 28" fill="none" stroke="#b98900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 23C5 11 13 5 24 5c0 11-6 19-18 19"/><path d="M5 23l9-9"/></svg><div><b>Sin contraindicaciones</b><span>No causa efectos secundarios</span></div></div>
-    <div><svg viewBox="0 0 28 28" fill="none" stroke="#b98900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13v10H4V13h4z"/><path d="M8 13l5-9c1.5 0 2.5 1 2.5 2.5V11h6a2 2 0 012 2.3l-1.4 7A2 2 0 0120 22H8"/></svg><div><b>90 % lo recomiendan</b><span>A sus amigos y familiares según encuestas de clientes</span></div></div>
+    <div><svg viewBox="0 0 28 28" fill="none" stroke="#b98900" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 13v10H4V13h4z"/><path d="M8 13l5-9c1.5 0 2.5 1 2.5 2.5V11h6a2 2 0 012 2.3l-1.4 7A2 2 0 0120 22H8"/></svg><div><b>El 90 % lo recomienda</b><span>A sus amigos y familiares según encuestas de clientes</span></div></div>
   </div>
   <div class="seal">
     <svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" fill="#fff" stroke="#b98900" stroke-width="1.5"/><circle cx="20" cy="20" r="14.5" fill="none" stroke="#b98900" stroke-width=".8" stroke-dasharray="2 1.5"/><path d="M13.5 20.5l4 4 9-9" fill="none" stroke="#b98900" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -754,7 +754,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   try{ var st=+localStorage.getItem('lp_stock'); if(st>6&&st<stock) stock=st; }catch(e){}   // остаток не растёт при перезагрузке
   function rs(){ sn.textContent=stock; sn2.textContent=stock; sb.style.width=Math.max(6,(stock/stockMax)*100)+'%'; try{ localStorage.setItem('lp_stock',stock); }catch(e){} }
   rs();
-  var L={"cc": "+52", "phMin": 10, "phMax": 10, "ph0": false, "fem": "a$", "t1m": "acaba de hacer un pedido", "t1f": "acaba de hacer un pedido", "t2m": "acaba de pedir 2 unidades", "t2f": "acaba de pedir 2 unidades", "agoMin": " min atrás", "agoH": " horas atrás", "agoY": "ayer", "agoD": " días atrás", "names": ["María", "José", "Guadalupe", "Juan", "Alejandra", "Luis", "Fernanda", "Miguel", "Karla", "Alejandro", "Diana", "Carlos", "Paola", "Ricardo", "Mariana", "Jorge", "Adriana", "Eduardo", "Gabriela", "Rodrigo"], "cities": ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla", "Tijuana", "León", "Ciudad Juárez", "Querétaro", "Mérida", "San Luis Potosí", "Aguascalientes", "Toluca", "Cancún", "Culiacán", "Hermosillo", "Saltillo", "Morelia", "Veracruz", "Chihuahua", "Torreón"]};   // локаль тостов/дат/телефона (генерится сборкой из i18n)
+  var L={"cc": "+52", "phMin": 10, "phMax": 10, "ph0": false, "fem": "a$", "t1m": "acaba de hacer un pedido", "t1f": "acaba de hacer un pedido", "t2m": "acaba de pedir 2 unidades", "t2f": "acaba de pedir 2 unidades", "agoMin": "hace {n} min", "agoH": "hace {n} h", "agoY": "ayer", "agoD": "hace {n} días", "names": ["María", "José", "Guadalupe", "Juan", "Alejandra", "Luis", "Fernanda", "Miguel", "Karla", "Alejandro", "Diana", "Carlos", "Paola", "Ricardo", "Mariana", "Jorge", "Adriana", "Eduardo", "Gabriela", "Rodrigo"], "cities": ["Ciudad de México", "Guadalajara", "Monterrey", "Puebla", "Tijuana", "León", "Ciudad Juárez", "Querétaro", "Mérida", "San Luis Potosí", "Aguascalientes", "Toluca", "Cancún", "Culiacán", "Hermosillo", "Saltillo", "Morelia", "Veracruz", "Chihuahua", "Torreón"]};   // локаль тостов/дат/телефона (генерится сборкой из i18n)
   var NAMES=L.names, CITIES=L.cities;
   function drop(){
     if(stock>6){
@@ -801,8 +801,9 @@ body.free .disc,body:not(.free) .nodisc{display:none}
   var AGO=[14,42,96,180,260,420];   // первые шесть — свежие, дальше растёт плавно (отзывов теперь 72)
   Array.prototype.forEach.call(document.querySelectorAll('.ago'),function(el){
     var i=+el.getAttribute('data-i'), m=(i<AGO.length?AGO[i]:Math.round(600+i*i*3.2+i*180)), t;
-    if(m<60) t=m+L.agoMin; else if(m<1440) t=Math.round(m/60)+L.agoH;
-    else if(m<2880) t=L.agoY; else t=Math.round(m/1440)+L.agoD;
+    var agoF=function(n,s){return s.indexOf('{n}')>=0?s.replace('{n}',n):n+s;};   // «vor {n} Min.» / «{n} min temu»
+    if(m<60) t=agoF(m,L.agoMin); else if(m<1440) t=agoF(Math.round(m/60),L.agoH);
+    else if(m<2880) t=L.agoY; else t=agoF(Math.round(m/1440),L.agoD);
     el.textContent=t;
   });
 
